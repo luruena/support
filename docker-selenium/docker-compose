@@ -1,0 +1,66 @@
+version: "3.9"
+services:
+ 
+  hub:
+    image: selenium/hub
+    container_name: selenium-hub
+    ports:
+      - "4444:4444" 
+    environment:
+      GRID_MAX_SESSION: 16
+      GRID_BROWSER_TIMEOUT: 6000
+      GRID_TIMEOUT: 6000
+ 
+  chrome:
+    image: selenium/node-chrome-debug
+    container_name: web-chrome
+    depends_on:
+      - hub
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+      SCREEN_WIDTH: 1920
+      SCREEN_HEIGHT: 1080
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "5900:5900"
+    links:
+      - hub
+ 
+  firefox:
+    image: selenium/node-firefox-debug
+    container_name: web-firefox
+    depends_on:
+      - hub
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+      SCREEN_WIDTH: 1920
+      SCREEN_HEIGHT: 1080
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "5901:5900"
+    links:
+      - hub
+
+  test-machine-chrome:
+    build:
+      context: .
+      args:
+        NIGHTWATCH_ARG: chrome 
+    depends_on:
+      - hub
+      - chrome
+      - firefox
+
+  test-machine-firefox:
+    build:
+      context: .
+      args:
+        NIGHTWATCH_ARG: firefox 
+    depends_on:
+      - hub
+      - chrome
+      - firefox      
