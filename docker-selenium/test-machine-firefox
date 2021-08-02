@@ -1,0 +1,47 @@
+Selenium Grid is up - executing tests
+
+Waiting for the Grid
+
+> eagle-eye@1.0.0 mg:prod /usr/src/app
+> cross-env DEBUG=nightwatch-api NIGHTWATCH_VERBOSE=true NIGHTWATCH_TARGET=prod NIGHTWATCH_PRODUCT=mansionglobal npm test -- --require step_definitions/mansionglobal/ --tags '@mansionglobal'
+
+> eagle-eye@1.0.0 test /usr/src/app
+> mkdirp report && cucumber-js --require-module @babel/register --require cucumber.conf.js --require step_definitions/shared/ --format @cucumber/pretty-formatter --format json:report/cucumber_report.json "--require" "step_definitions/mansionglobal/" "--tags" "@mansionglobal"
+
+Feature: Show ads at home page # features/mansionglobal/Home/ads.feature:1
+
+As a user I want to be availabe to see ads at home page
+
+Scenario Outline: Shows Ads on Top Stories section # 
+Using Docker
+Using: firefox (90.0) on linux 5.4.72-microsoft-standard-WSL2 platform.
+
+Given I open home page on my "desktop"
+Timed out while waiting for element <body> to be present for 60000 milliseconds. - expected "visible" but got: "not found" (60350ms)
+undefined ✖ failed
+Timed out while waiting for element <body> to be present for 60000 milliseconds. - expected "visible" but got: "not found" (60350ms)
+at World.Given (/usr/src/app/step_definitions/shared/common.js:13:16)
+at processTicksAndRejections (internal/process/next_tick.js:81:5)
+And I'm on home page
+- skipped
+When I go to Top Stories section
+- skipped
+Then I should see "ad1" with the correct "size1,size3"
+- skipped
+
+Scenario Outline: Shows Ads on Top Stories section #
+Using: firefox (90.0) on linux 5.4.72-microsoft-standard-WSL2 platform.
+
+Given I open home page on my "tablet"
+Timed out while waiting for element <body> to be present for 60000 milliseconds. - expected "visible" but got: "not found" (60885ms)
+undefined ✖ failed
+Timed out while waiting for element <body> to be present for 60000 milliseconds. - expected "visible" but got: "not found" (60885ms)
+at World.Given (/usr/src/app/step_definitions/shared/common.js:13:16)
+at processTicksAndRejections (internal/process/next_tick.js:81:5)
+And I'm on home page
+- skipped
+When I go to Top Stories section
+- skipped
+Then I should see "ad1" with the correct "size1,size3"
+- skipped
+
