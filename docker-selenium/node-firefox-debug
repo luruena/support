@@ -1,0 +1,75 @@
+2021-08-02 12:37:46,742 INFO Included extra file "/etc/supervisor/conf.d/selenium-debug.conf" during parsing
+2021-08-02 12:37:46,742 INFO Included extra file "/etc/supervisor/conf.d/selenium.conf" during parsing
+2021-08-02 12:37:46,745 INFO supervisord started with pid 8
+2021-08-02 12:37:47,757 INFO spawned: 'xvfb' with pid 10
+2021-08-02 12:37:47,766 INFO spawned: 'fluxbox' with pid 11
+2021-08-02 12:37:47,771 INFO spawned: 'vnc' with pid 12
+2021-08-02 12:37:47,778 INFO spawned: 'selenium-node' with pid 13
+2021-08-02 12:37:48,056 INFO success: xvfb entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+
+2021-08-02 12:37:48,057 INFO success: fluxbox entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2021-08-02 12:37:48,057 INFO success: vnc entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+2021-08-02 12:37:48,057 INFO success: selenium-node entered RUNNING state, process has stayed up for > than 0 seconds (startsecs)
+12:37:48.705 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+12:37:48.963 INFO [GridLauncherV3.lambda$buildLaunchers$7] - Launching a Selenium Grid node on port 5555
+2021-08-02 12:37:49.092:INFO::main: Logging initialized @706ms to org.seleniumhq.jetty9.util.log.StdErrLog
+12:37:49.346 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+12:37:49.422 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 5555
+12:37:49.423 INFO [GridLauncherV3.lambda$buildLaunchers$7] - Selenium Grid node is up and ready to register to the hub
+12:37:49.464 INFO [SelfRegisteringRemote$1.run] - Starting auto registration thread. Will try to register every 5000 ms.
+12:37:49.788 INFO [SelfRegisteringRemote.registerToHub] - Registering the node to the hub: http://hub:4444/grid/register
+12:37:49.833 INFO [SelfRegisteringRemote.registerToHub] - The node is registered to the hub and ready to use
+12:37:53.774 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+"acceptInsecureCerts": true,
+"acceptSslCerts": true,
+"browserName": "firefox",
+"default_path_prefix": "\u002fwd\u002fhub",
+"javascriptEnabled": true,
+"marionette": true,
+"seleniumProtocol": "WebDriver"
+}
+12:37:53.776 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1627907873801 geckodriver INFO Listening on 127.0.0.1:19207
+1627907873825 mozrunner::runner INFO Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileoNco0g"
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: glxtest: libEGL missing
+1627907874417 Marionette INFO Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoNco0g/search.json.mozlz4", (void 0)))
+1627907876264 Marionette INFO Listening on port 36433
+1627907876358 Marionette WARN TLS certificate errors will be ignored for this session
+12:37:56.377 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+12:37:56.398 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 41f337ba-ca28-429f-81dd-53d4fffb6dda (org.openqa.selenium.firefox.GeckoDriverService)
+JavaScript error: https://0cf17917-395b-4f25-91cc-db3bdd6044b0.edge.permutive.app/772abb27-aff3-4dcc-b7af-8ab66a56137a-web.js, line 1: TypeError: r.extMessages is undefined
+1627907945039 Marionette INFO Stopped listening on port 36433
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+12:39:06.340 INFO [ActiveSessions$1.onStop] - Removing session 41f337ba-ca28-429f-81dd-53d4fffb6dda (org.openqa.selenium.firefox.GeckoDriverService)
+12:39:06.422 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+"acceptInsecureCerts": true,
+"acceptSslCerts": true,
+"browserName": "firefox",
+"default_path_prefix": "\u002fwd\u002fhub",
+"javascriptEnabled": true,
+"marionette": true,
+"seleniumProtocol": "WebDriver"
+}
+12:39:06.422 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1627907946442 geckodriver INFO Listening on 127.0.0.1:29394
+1627907946466 mozrunner::runner INFO Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6W4RyH"
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: glxtest: libEGL missing
+1627907947651 Marionette INFO Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile6W4RyH/search.json.mozlz4", (void 0)))
+1627907950877 Marionette INFO Listening on port 39121
+1627907951010 Marionette WARN TLS certificate errors will be ignored for this session
+12:39:11.064 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+12:39:11.066 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 04eb8836-2189-4967-b934-156fb760ecc4 (org.openqa.selenium.firefox.GeckoDriverService)
+JavaScript error: https://0cf17917-395b-4f25-91cc-db3bdd6044b0.edge.permutive.app/772abb27-aff3-4dcc-b7af-8ab66a56137a-web.js, line 1: TypeError: r.extMessages is undefined
+1627908020152 Marionette INFO Stopped listening on port 39121
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+12:40:20.731 INFO [ActiveSessions$1.onStop] - Removing session 04eb8836-2189-4967-b934-156fb760ecc4 (org.openqa.selenium.firefox.GeckoDriverService)
