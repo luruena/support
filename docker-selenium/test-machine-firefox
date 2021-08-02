@@ -16,7 +16,11 @@ Scenario Outline: Shows Ads on Top Stories section #
 Using Docker
 Using: firefox (90.0) on linux 5.4.72-microsoft-standard-WSL2 platform.
 
+2021-08-02T13:09:31.155Z nightwatch-api Session created for firefox environment
 Given I open home page on my "desktop"
+Error while running .setWindowSize() protocol action: An unknown error has occurred.
+Error: An unknown error has occurred.
+at processTicksAndRejections (internal/process/next_tick.js:81:5)
 Timed out while waiting for element <body> to be present for 60000 milliseconds. - expected "visible" but got: "not found" (60350ms)
 undefined ✖ failed
 Timed out while waiting for element <body> to be present for 60000 milliseconds. - expected "visible" but got: "not found" (60350ms)
